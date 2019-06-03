@@ -1,0 +1,11 @@
+<div><div style="width:500px;height:800px; margin-left:0px;margin-top: 0px; background: aliceblue; display: table-cell;" class="col-xs-6">
+<div style="background: #000; display: table" *ngFor="let x of numbers7">
+  <div style="position: relative;background: burlywood; width: 100px; height: 100px; margin: auto; display: table-cell;border: 2px solid black" *ngFor="let y of numbers5" id="division{{x*5+y}}" >
+    <div class = "circle" [style.height.px]="this.object[x*5+y].radius" [style.width.px]="this.object[x*5+y].radius" ></div>
+  </div>
+  <br>
+</div>
+<button (click)="resetAll()">END</button>
+</div>
+<app-right-container onchange="Check()" [objectright]='this.object' ></app-right-container>
+</div>
